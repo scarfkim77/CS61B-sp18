@@ -31,22 +31,26 @@ public class Percolation {
         if (!isOpen(row, col)) {
             grid[index] = index;
         }
-        if (isOpen(row, col-1)) {
-            gridUF.union(index, index-1);
-        }
-        if (isOpen(row, col+1)) {
-            gridUF.union(index, index+1);
-        }
-        if (isOpen(row-1, col)) {
-            gridUF.union(index, index-rowOrCol);
-        }
-        if (isOpen(row+1, col)) {
-            gridUF.union(index, index+rowOrCol);
-        }
-        if (row == 0) {
-            gridUF.union(index, virtualTopSite);
-        } else if (row == rowOrCol) {
-            gridUF.union(index, virtualBottomSite);
+        try {
+            if (isOpen(row, col - 1)) {
+                gridUF.union(index, index - 1);
+            }
+            if (isOpen(row, col + 1)) {
+                gridUF.union(index, index + 1);
+            }
+            if (isOpen(row - 1, col)) {
+                gridUF.union(index, index - rowOrCol);
+            }
+            if (isOpen(row + 1, col)) {
+                gridUF.union(index, index + rowOrCol);
+            }
+            if (row == 0) {
+                gridUF.union(index, virtualTopSite);
+            } else if (row == rowOrCol) {
+                gridUF.union(index, virtualBottomSite);
+            }
+        } catch (IndexOutOfBoundsException e) {
+            return;
         }
     }
 
@@ -82,5 +86,19 @@ public class Percolation {
     //Does the system percolates?
     public boolean percolates() {
         return gridUF.connected(virtualTopSite, virtualBottomSite);
+    }
+
+    // use for unit testing (not required)
+    public static void main(String[] args) {
+        Percolation test = new Percolation(3);
+        System.out.println(test.rowOrCol);
+        test.open(2, 2);
+        /*test.open(0, 2);
+        test.open(1, 2);
+        test.open(2, 2);
+        test.open(2, 0);
+        System.out.println(test.percolates());
+        System.out.println(test.isFull(2, 0));
+        */
     }
 }
