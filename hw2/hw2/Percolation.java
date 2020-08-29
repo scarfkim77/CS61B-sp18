@@ -4,10 +4,10 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
 
-    int rowOrCol, size, numberOfOpenSites;
-    int[] grid;
-    WeightedQuickUnionUF gridUF;
-    int virtualTopSite, virtualBottomSite;
+    private int rowOrCol, size, numberOfOpenSites;
+    private int[] grid;
+    private WeightedQuickUnionUF gridUF;
+    private int virtualTopSite, virtualBottomSite;
 
     //Create N-by-N grid, with all sites initially blocked
     public Percolation(int N) {
@@ -22,18 +22,18 @@ public class Percolation {
             grid[i] = -1;
         }
         //多初始化2格，分别留给virtualTopSite和virtualBottomSite
-        gridUF = new WeightedQuickUnionUF(size+2);
+        gridUF = new WeightedQuickUnionUF(size + 2);
         virtualTopSite = size;
         virtualBottomSite = size + 1;
     }
 
     //Change the row and col into 1D-index
-    public int getIndex(int row, int col) {
+    private int getIndex(int row, int col) {
         return row * rowOrCol + col;
     }
 
     //Check if the site is legal or not
-    public boolean isValid(int row, int col) {
+    private boolean isValid(int row, int col) {
         if (row < 0 || row >= rowOrCol || col < 0 || col >= rowOrCol) {
             return false;
         }
@@ -62,7 +62,8 @@ public class Percolation {
             }
             if (row == 0) {
                 gridUF.union(index, virtualTopSite);
-            } else if (row == rowOrCol - 1) {
+            }
+            if (row == rowOrCol - 1) {
                 gridUF.union(index, virtualBottomSite);
             }
         } catch (IndexOutOfBoundsException e) {
@@ -100,12 +101,12 @@ public class Percolation {
 
     // use for unit testing (not required)
     public static void main(String[] args) {
-        Percolation test = new Percolation(3);
-        test.open(0, 2);
-        test.open(1, 2);
+        Percolation test = new Percolation(1);
+        test.open(0, 0);
+        /*test.open(1, 2);
         test.open(2, 2);
-        test.open(2, 0);
+        test.open(2, 0);*/
         System.out.println(test.percolates());
-        System.out.println(test.isFull(0, 2));
+        //System.out.println(test.isFull(0, 2));
     }
 }
