@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48090cc9-4ff5-4681-8b08-83379abba592" name="默认更改列表" comment="add exception in method open(int row, int col)">
+    <list default="true" id="48090cc9-4ff5-4681-8b08-83379abba592" name="默认更改列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw2/Percolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw2/Percolation.java" afterDir="false" />
     </list>
@@ -78,31 +78,27 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="add exception in method open(int row, int col)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add exception in method open(int row, int col)" />
-  </component>
   <component name="WindowStateProjectService">
     <state x="323" y="81" key="FileChooserDialogImpl" timestamp="1598597768394">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="323" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598597768394" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1598683599827">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1598682327723">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598683599827" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1598683599827">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598682327723" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1598682327723">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598683599827" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1598683599826">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598682327723" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1598682327723">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598683599826" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1598683599827">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598682327723" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1598682327723">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598683599827" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598682327723" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1598597771731">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
