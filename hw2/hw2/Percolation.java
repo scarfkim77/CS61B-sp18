@@ -21,8 +21,8 @@ public class Percolation {
         }
         //多初始化2格，分别留给virtualTopSite和virtualBottomSite
         gridUF = new WeightedQuickUnionUF(N*N+2);
-        virtualTopSite = N * N + 1;
-        virtualBottomSite = N * N + 2;
+        virtualTopSite = N * N;
+        virtualBottomSite = N * N + 1;
     }
 
     //Open the site(row, col) if it is not open already
@@ -92,7 +92,7 @@ public class Percolation {
     public static void main(String[] args) {
         Percolation test = new Percolation(3);
         System.out.println(test.rowOrCol);
-        test.open(2, 2);
+        test.open(0, 2);
         /*test.open(0, 2);
         test.open(1, 2);
         test.open(2, 2);
