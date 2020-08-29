@@ -62,7 +62,7 @@ public class Percolation {
             }
             if (row == 0) {
                 gridUF.union(index, virtualTopSite);
-            } else if (row == rowOrCol) {
+            } else if (row == rowOrCol - 1) {
                 gridUF.union(index, virtualBottomSite);
             }
         } catch (IndexOutOfBoundsException e) {
@@ -105,7 +105,7 @@ public class Percolation {
         test.open(1, 2);
         test.open(2, 2);
         test.open(2, 0);
-        //System.out.println(test.percolates());
+        System.out.println(test.percolates());
         System.out.println(test.isFull(0, 2));
     }
 }
