@@ -107,6 +107,7 @@ public class Percolation {
         test.open(2, 2);
         test.open(2, 0);*/
         System.out.println(test.percolates());
+        System.out.println(test.numberOfOpenSites());
         //System.out.println(test.isFull(0, 2));
     }
 }

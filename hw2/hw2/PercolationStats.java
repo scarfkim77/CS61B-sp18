@@ -23,7 +23,7 @@ public class PercolationStats {
                 int randomCol = StdRandom.uniform(N);
                 experiment.open(randomRow, randomCol);
             }
-            p[i] = experiment.numberOfOpenSites() / (N*N);
+            p[i] = (double) experiment.numberOfOpenSites() / (N*N);
         }
         mean = this.mean();
         stddev = this.stddev();
@@ -31,12 +31,7 @@ public class PercolationStats {
 
     //Sample mean of percolation threshold
     public double mean() {
-        double sum = 0;
-        for (int i = 0; i < times; i++) {
-            sum += p[i];
-        }
-        return sum / times;
-        //return StdStats.mean(p);
+        return StdStats.mean(p);
     }
 
     //Sample standard deviation of percolation threshold
@@ -52,5 +47,13 @@ public class PercolationStats {
     //High endpoint of 95% confidence interval
     public double confidenceHigh() {
         return mean + 1.96 * stddev / Math.pow(times, 0.5);
+    }
+
+    public static void main(String[] args) {
+        int N = 20, T = 10;
+        PercolationFactory pf = new PercolationFactory();
+        pf.make(N);
+        PercolationStats test = new PercolationStats(N, T, pf);
+        System.out.println(test.p[3]);
     }
 }
