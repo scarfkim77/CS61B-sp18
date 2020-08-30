@@ -7,7 +7,7 @@ public class PercolationStats {
 
     private double[] p;
     private int times;
-    private double mean, stddev;
+    //private double mean, stddev;
 
     //Perform T independent experiments on an N-by-N grid
     public PercolationStats(int N, int T, PercolationFactory pf) {
@@ -25,8 +25,8 @@ public class PercolationStats {
             }
             p[i] = experiment.numberOfOpenSites() / (N*N);
         }
-        mean = this.mean();
-        stddev = this.stddev();
+        //mean = this.mean();
+        //stddev = this.stddev();
     }
 
     //Sample mean of percolation threshold
@@ -41,11 +41,15 @@ public class PercolationStats {
 
     //Low endpoint of 95% confidence interval
     public double confidenceLow() {
+        double mean = mean();
+        double stddev = stddev();
         return mean - 1.96 * stddev / Math.pow(times, 0.5);
     }
 
     //High endpoint of 95% confidence interval
     public double confidenceHigh() {
+        double mean = mean();
+        double stddev = stddev();
         return mean + 1.96 * stddev / Math.pow(times, 0.5);
     }
 }
