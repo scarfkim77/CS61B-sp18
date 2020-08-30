@@ -25,8 +25,8 @@ public class PercolationStats {
             }
             p[i] = experiment.numberOfOpenSites() / (N*N);
         }
-        mean = mean();
-        stddev = stddev();
+        mean = this.mean();
+        stddev = this.stddev();
     }
 
     //Sample mean of percolation threshold

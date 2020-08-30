@@ -13,6 +13,8 @@
     <list default="true" id="48090cc9-4ff5-4681-8b08-83379abba592" name="默认更改列表" comment="add exception in method open(int row, int col)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hw2/PercolationStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw2/PercolationStats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw2/PercolationVisualizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/hw2/PercolationVisualizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw2/hw2/Percolation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw2/hw2/Percolation.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +37,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.PercolationVisualizer">
     <configuration name="Percolation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hw2.Percolation" />
       <module name="hw2" />
@@ -49,8 +51,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PercolationVisualizer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hw2.PercolationVisualizer" />
+      <module name="hw2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PercolationVisualizer" />
         <item itemvalue="Application.Percolation" />
       </list>
     </recent_temporary>
@@ -95,22 +111,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="323" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598597768394" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1598688227963">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1598757907540">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598688227963" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1598688227963">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1598757907540" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1598757907540">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598688227963" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1598688227963">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1598757907540" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1598757907539">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598688227963" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1598688227963">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1598757907539" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1598757907540">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598688227963" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1598757907540" />
     <state x="121" y="0" key="SettingsEditor" timestamp="1598597771731">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
