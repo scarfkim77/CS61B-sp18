@@ -19,8 +19,8 @@ public class PercolationStats {
         for (int i = 0; i < times; i++) {
             Percolation experiment = pf.make(N);
             while (!experiment.percolates()) {
-                int randomRow = (int) StdRandom.uniform() * N;
-                int randomCol = (int) StdRandom.uniform() * N;
+                int randomRow = StdRandom.uniform(N);
+                int randomCol = StdRandom.uniform(N);
                 experiment.open(randomRow, randomCol);
             }
             p[i] = experiment.numberOfOpenSites() / (N*N);
