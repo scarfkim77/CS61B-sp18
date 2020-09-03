@@ -1,9 +1,6 @@
 package lab9;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 /**
  *  A hash table-backed Map implementation. Provides amortized constant time
@@ -28,8 +25,8 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
         this.clear();
     }
 
-    public MyHashMap(int n) {
-        buckets = new ArrayMap[n];
+    public MyHashMap(int factor) {
+        buckets = new ArrayMap[DEFAULT_SIZE * factor];
         this.clear();
     }
 
@@ -80,10 +77,11 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
     }
 
     private void resize(int factor) {
-        MyHashMap<K, V> newHashMap = new MyHashMap<>(DEFAULT_SIZE * factor);
-        for (K key: this.keySet()) {
-            newHashMap.put(key, this.get(key));
+        MyHashMap<K, V> newHashMap = new MyHashMap<>(factor);
+        for (int i = 0; i < this.buckets.length; i++) {
+            newHashMap.buckets[i] = this.buckets[i];
         }
+        this.size = newHashMap.size;
         this.buckets = newHashMap.buckets;
     }
 
@@ -98,6 +96,9 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
     /* Returns a Set view of the keys contained in this map. */
     @Override
     public Set<K> keySet() {
+        if (size() == 0) {
+            return null;
+        }
         Set<K> keySet = new HashSet<>();
         for (ArrayMap<K, V> am: buckets) {
             keySet.addAll(am.keySet());
@@ -131,6 +132,7 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
         if (buckets[index].get(key) != value) {
             return null;
         }
+        buckets[index].remove(key, value);
         return value;
     }
 
@@ -138,4 +140,12 @@ public class MyHashMap<K, V> implements Map61B<K, V> {
     public Iterator<K> iterator() {
         return keySet().iterator();
     }
+
+    public static void main(String[] args) {
+        MyHashMap<String, Integer> test = new MyHashMap<>();
+        test.put("a", 1);
+        test.put("b", 2);
+        System.out.println(test.size());
+    }
+
 }
